@@ -74,7 +74,11 @@ const Sidebar = ({
             expanded ? 'w-44 pl-2' : 'hidden'
           }`}
         >
-          <img src='../../public/logo.png' alt='' className='w-6 h-6' />
+          <img
+            src='https://i.ibb.co/mNvFc0Q/logo-2.png'
+            alt=''
+            className='w-6 h-6'
+          />
           <div className='text-white pl-2'>
             <h4 className='font-semibold'>Copyright MediaPool 2023</h4>
           </div>
