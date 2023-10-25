@@ -70,7 +70,7 @@ const Sidebar = ({
         </div>
 
         <div
-          className={`flex flex-1 pl-4 pt-4 items-center transition-all ${
+          className={`flex fixed bottom-8 pl-4 pt-4 items-center transition-all ${
             expanded ? 'w-44 pl-2' : 'hidden'
           }`}
         >
