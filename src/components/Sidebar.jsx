@@ -80,7 +80,7 @@ const Sidebar = ({
             className='w-6 h-6'
           />
           <div className='text-white pl-2'>
-            <h4 className='font-semibold'>Copyright MediaPool 2023</h4>
+            <h4 className='font-semibold'>Copyright VideoPool 2023</h4>
           </div>
         </div>
       </div>
@@ -88,9 +88,9 @@ const Sidebar = ({
   } else if (sizeHandle === 'horizontal') {
     // Render a horizontal scrolling sidebar when 'sizeHandle' is 'horizontal'
     return (
-      <div className='relative flex items-center px-2 border-b border-gray-700'>
+      <div className='relative flex items-center px-2 border-b border-gray-700 hover:bg-gray-700'>
         <MdChevronLeft
-          className='text-white/80 cursor-pointer hover:text-white/100 border-r-4 border-gray-700'
+          className='text-white/80 cursor-pointer hover:text-white/100 hover:bg-gray-700 border-r-4 border-gray-700'
           onClick={handleScrollLeft}
           size={40}
         />
@@ -118,7 +118,7 @@ const Sidebar = ({
           ))}
         </div>
         <MdChevronRight
-          className='text-white/80 cursor-pointer hover:text-white/100 border-l-4 border-gray-700'
+          className='text-white/80 cursor-pointer hover:text-white/100 hover:bg-gray-700 border-l-4 border-gray-700'
           onClick={handleScrollRight}
           size={40}
         />

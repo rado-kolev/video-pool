@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { HiOutlineSearch, HiOutlineArrowLeft } from 'react-icons/hi';
 import { useNavigate } from 'react-router';
+import { MdClose } from 'react-icons/md';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -53,6 +54,11 @@ const SearchBar = () => {
     }
   };
 
+  // Clear the search input
+  const clearSearch = () => {
+    setSearchTerm('');
+  };
+
   return (
     <div
       className={`flex items-center bg-[#2d2d2d] ${
@@ -61,12 +67,12 @@ const SearchBar = () => {
     >
       <form
         onSubmit={handleSubmit}
-        className={`flex items-center border border-gray-700 rounded-full w-full mr-8`}
+        className={`flex items-center border-2 border-gray-700 bg-gray-700 rounded-full w-full mr-8 ml-4`}
       >
         {isExpanded && window.innerWidth <= 640 && (
           <HiOutlineArrowLeft
             size={24}
-            className='text-white cursor-pointer hover:scale-125 ml-2'
+            className='text-white cursor-pointer hover:scale-125 mx-2'
             onClick={toggleBack}
           />
         )}
@@ -74,11 +80,26 @@ const SearchBar = () => {
           type='text'
           placeholder='Search...'
           value={searchTerm}
-          className={`bg-[#2d2d2d] text-white outline-none border border-none rounded-full sm:block sm:w-72 ml-2 pl-2 ${
+          className={`bg-[#2d2d2d] text-white outline-none border border-none rounded-l-full sm:block sm:w-72 p-2 pl-4 ${
             isExpanded ? 'block w-full' : 'hidden' // Conditionally set the input's width based on 'isExpanded'
           }`}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <div
+          className={`h-10 w-8 flex items-center  ${
+            searchTerm ? 'bg-[#2d2d2d]' : ''
+          }`}
+        >
+          {searchTerm && (
+            <div className=''>
+              <MdClose
+                size={24}
+                className='text-white/70 cursor-pointer hover:scale-125 hover:text-white'
+                onClick={clearSearch}
+              />
+            </div>
+          )}
+        </div>
         {isExpanded ? (
           <HiOutlineSearch
             size={24}

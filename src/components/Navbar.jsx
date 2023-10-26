@@ -29,7 +29,7 @@ const Navbar = ({ toggleSidebar }) => {
             alt='logo'
             className='w-7 mr-1'
           />
-          <p className='text-3xl font-bold text-white'>MediaPool</p>
+          <p className='text-3xl font-bold text-white'>VideoPool</p>
         </a>
       </div>
       <SearchBar />
