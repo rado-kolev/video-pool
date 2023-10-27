@@ -25,9 +25,10 @@ const ChannelDetail = () => {
     <div>
       <div>
         {/* Background gradient for the top of the channel detail page. */}
-        <div className='z-10 h-[300px] bg-gradient-to-r from-red-400 to-red-900'></div>
-        {/* Render the ChannelCard component with channel details. */}
-        <ChannelCard channelDetail={channelDetail} />
+        <div className='z-10 h-[350px] flex items-center bg-gradient-to-r from-red-400 to-red-900'>
+          {/* Render the ChannelCard component with channel details. */}
+          <ChannelCard channelDetail={channelDetail} />
+        </div>
       </div>
       <div className='flex p-4 mt-6'>
         {/* Render the Videos component with videos associated with the channel. */}

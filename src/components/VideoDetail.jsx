@@ -42,7 +42,6 @@ const VideoDetail = () => {
         className='flex-grow w-full flex-1 pb-4 bg-[#2d2d2d]'
       >
         <div className='relative cursor-auto' style={{ paddingTop: '56.25%' }}>
-
           {/* Display the video using ReactPlayer with specified URL */}
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${id}`}
@@ -53,16 +52,18 @@ const VideoDetail = () => {
           />
         </div>
         <div className='flex flex-col justify-between text-gray-300/80'>
-          <h2 className='text-white font-bold text-2xl py-4'>{title}</h2>
+          <h2 className='text-white font-bold text-lg sm:text-2xl py-4'>
+            {title}
+          </h2>
           <div className='flex flex-col sm:flex-row justify-between'>
             <Link
               to={`/channel/${channelId}`}
-              className='flex items-center font-bold text-lg mb-4 sm:mb-0'
+              className='flex items-center font-bold sm:text-lg mb-4 sm:mb-0'
             >
               <p>{channelTitle}</p>
               <BsFillCheckCircleFill className='text-gray-300/80 text-xs ml-1' />
             </Link>
-            <div className='flex flex-col sm:flex-row gap-2 sm:gap-8'>
+            <div className='flex sm:flex-row gap-6 sm:gap-8'>
               <p className='text-white/90'>
                 {parseInt(viewCount).toLocaleString()} views
               </p>
@@ -75,7 +76,7 @@ const VideoDetail = () => {
       </div>
       <div
         id='playlist'
-        className='w-full lg:w-72 xl:w-80 2xl:w-[350px] lg:pl-6 mt-12 lg:mt-0'
+        className='w-full lg:w-72 xl:w-80 2xl:w-[350px] lg:pl-6 mt-4 lg:mt-0'
       >
         <Videos
           videos={videos}
